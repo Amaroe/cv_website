@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ichiban" ng-cloak>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            [ng\:cloak], [ng-cloak], .ng-cloak {
+                display: none;
+            }
+            a:link {
+                color:black;
+                text-decoration: none;
+            }
+            body {
+                background: rgb(255, 255, 255);
+                
+            }
+            .content {
+                max-width:700px;
+                margin: auto;
+                background: white;
+                padding: 10px;
+                text-align: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            /* Style the tab */
+            .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+            background-color: inherit;
+           
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            
+            top: 50%;
+            left: 50%;
+  
+            }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+            background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+            background-color: #ccc;
+            }
+
+            /* Style the tab content */
+            .tabcontent {
+                display: none;
+                padding: 6px 12px;
+                border: 1px solid #ccc;
+                border-top: none;
+                animation: fadeEffect 1s; /*Fading effect takes 1 second*/
+            }
+
+            /* Go from zero to full opacity*/
+            @keyframes fadeEffect {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+        </style>
+    <title>Isaac H. Cornelius</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    
+    <div class="content" ng-controller="myCtrl">
+        <h1>{{firstName + " "+ lastName}}</h1>
+        
+        <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About</button>
+                <button class="tablinks" onclick="openCity(event, 'CV')">CV</button>
+                <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
+        </div>
+        
+        <div id="About" class="tabcontent">
+        <h3>Hello!</h3>
+        <p>I am a student at Loughborough University and I'm currently on a gap year. </p>
+        </div>
+        
+        <div id="CV" class="tabcontent">
+        <h3></h3>
+        <p>
+            <b>----WORK EXPERIENCE----</b><br><br>
+ 
+            <b>August 2018</b> <br><br>
+             
+            Event Volunteer, Queen Elizabeth Olympic Park, London I worked as part of a team to run a duathlon
+             activity for the Triathlon Trust for children and families attending the Hockey World Cup. I would
+              explain the rules of the activity to individuals, time them and then put their time on a leaderboard.<br><br>
+             
+             
+            <b>July 2017-September 2017</b><br><br>
+             
+            Voluntary Charity Shop Assistant, Aston Mansfield My role as an assistant included handling donations,
+             sorting items in the store and serving customers which developed my communication skills and ability to
+              work under pressure during busy hours. I gained enough trust from my manager that I was given the responsibility
+               to open and close the shop on my own. <br><br>
+             
+            <b>2015</b><br><br>
+             
+            Voluntary Assistant Teacher, St Joseph’s Catholic Junior School, London I helped small groups of Year 4 students with
+             their Maths work and their artwork. I also worked as part of a team with other assistant teachers to guide in-class 
+             activities with the students. <br><br>
+             
+            <b>2012</b> <br><br>   
+             
+            Voluntary Assistant Teacher, Roger Ascham Primary School, London I helped Year 2 students with their Maths and reading
+             comprehension skills. I assisted in helping organise activities such as painting and cleaning up after students when they 
+             were finished.<br> </p> 
+        </div>
+        
+        <div id="Contact" class="tabcontent">
+        <h3>Feel free to get in touch!</h3>
+        <p>{{email}}<br>
+           <a href={{linkedin}}>LinkedIn: {{linkedin}}</a> <br>
+        </p>
+        </div>
+
+
+
+    </div>
+
+    
+
+    
+    <script src="js/exam47.js"></script>
+</body>
+</html>
